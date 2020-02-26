@@ -7,6 +7,9 @@
 #include "Ethernet.h"
 #include "WiFi.h"
 
+/*
+ * Kill the program if there are issues with the socket
+ */
 void error(char *msg)
 {
     perror(msg);
@@ -61,7 +64,6 @@ void get_file(char* hostname, int portno, char* bmp_filename, char* palette_file
     }
 
     int img_filesize = atoi(img_header);
-    printf("IMAGE FILESIZE: %d\n", img_filesize);
 
     // Read the bmp file
 	char img_chunk[CHUNK_SIZE];
@@ -75,7 +77,8 @@ void get_file(char* hostname, int portno, char* bmp_filename, char* palette_file
 			break;
 		}
 
-		memset(img_chunk ,0 , CHUNK_SIZE);  //clear the variable
+		// Clear the image chunk buffer to read new while still streaming
+		memset(img_chunk ,0 , CHUNK_SIZE);  
 		int read_size = CHUNK_SIZE > remaining_bytes ? remaining_bytes : CHUNK_SIZE;
 		size_recv =  read(sockfd, img_chunk, read_size);
 
@@ -107,7 +110,6 @@ void get_file(char* hostname, int portno, char* bmp_filename, char* palette_file
 	}
 
 	int palette_filesize = atoi(palette_header);
-	printf("PALETTE FILESIZE: %d\n", palette_filesize);
 
 	// Read the palette text file
 	char palette_chunk[CHUNK_SIZE];
@@ -121,7 +123,8 @@ void get_file(char* hostname, int portno, char* bmp_filename, char* palette_file
 			break;
 		}
 
-		memset(palette_chunk ,0 , CHUNK_SIZE);  //clear the variable
+		// Clear the palette chunk buffer to read new while still streaming
+		memset(palette_chunk ,0 , CHUNK_SIZE);
 		int read_size = CHUNK_SIZE > remaining_bytes ? remaining_bytes : CHUNK_SIZE;
 		size_recv =  read(sockfd, palette_chunk, read_size);
 

@@ -31,7 +31,7 @@
 // Datatype to hold the x,y coordinates of a touch/release event
 typedef struct { int x, y; } Point ;
 
-/*
+/**
  * Subroutine to initialise the Touch Port by writing some data
  * to the internal registers.
  *
@@ -42,59 +42,59 @@ typedef struct { int x, y; } Point ;
 */
 void init_touch(void);
 
-/*
+/**
  * Remove/flush the UART receiver buffer by removing any unread characters.
  */
 void touch_flush(void);
 
-/*
+/**
  * Writes a character to the touch screen serial port.
  */
 int put_char_touch(int c);
 
-/*
+/**
  * Blocks until a character is received from the touch screen serial port.
  */
 int get_char_touch(void);
 
-/*
+/**
  * Blocks and tests if the next touch screen event was a touch.
  */
 int screen_touched( void );
 
-/*
+/**
  * Blocks and tests if the next touch screen event was a release.
  */
 int screen_released( void );
 
-/*
+/**
  * Blocks until a touch event is detected.
  */
 void wait_for_touch();
 
-/*
+/**
  * Blocks until a release event is detected.
  */
 void wait_for_release();
 
-/*
+/**
  * This function polls the UART to determine if any character
  * has been received. It doesn't wait for one, or read it, it simply tests
  * to see if one is available to read from the FIFO
  */
 int touch_test_for_received_data(void);
 
-/*
+/**
  * This function waits for a touch screen press event and returns X,Y coord
  */
 Point get_press(void);
 
-/*
+/**
  * This function waits for a touch screen release event and returns X,Y coord
  */
 Point get_release(void);
 
-/*
+/**
  * This function waits for a touch screen press event, and then a release event
  * and returns X,Y coord of the release.
  */

@@ -4,6 +4,9 @@
 #include "../Display/Colours.h"
 #include "../Display/Fonts.h"
 
+/**
+ * Draw error prompt, requires user input
+ */ 
 void draw_error_screen(char * message)
 {
 	draw_filled_box(100, 700, 100, 380, BLUE);

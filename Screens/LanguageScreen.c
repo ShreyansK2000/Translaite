@@ -22,6 +22,12 @@ const char * native_languages[] = {"Native language:", "Langue maternelle:", "Le
 									 "Lingua nativa:"};
 const char * main_menu_trans[] = {"Main menu", "Menu principal", "Menu principal", "Hauptmenu", "Menu principale"};
 
+/**
+ * Draw all the language screen options, main menu button
+ * 
+ * Target language buttons on top row
+ * Native language buttons on bottom row
+ */ 
 void draw_language_screen()
 {
 	int i;
@@ -52,6 +58,11 @@ void draw_language_screen()
 	draw_hollow_button(500, 750, 25, 75, main_menu_trans[native_language], BLACK, WHITE, WHITE);
 }
 
+/**
+ * Select native and target languages based on screen touch coordinates
+ * 
+ * @param touch Point struct containing touch coordinates on language screen
+ */ 
 void change_language(Point touch)
 {
 	// Touch top row event (Target language)

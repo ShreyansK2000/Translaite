@@ -17,7 +17,7 @@
 char username[1024] = "";
 char password[1024] = "";
 
-/*
+/**
  * Draws all the components on the login screen (
  */
 void draw_login_screen()
@@ -72,12 +72,9 @@ void login_screen()
 				// GPS fetch location, set language
 				loading_screen("GPS values initializing. Please wait.");
 				init_gps();
-				// --------------------------
-				// HTTP request
+
 				native_language = get_country_from_coords(get_latitude(), get_longitude());
-				printf("NATIVE LANGUAGE CODE: %d\n", native_language);
-				printf("NATIVE LANGUAGE: %s\n", languages[0][native_language]);
-				//---------------------------
+
 				keep_loading = 0;
 				main_menu_screen();
 				return;

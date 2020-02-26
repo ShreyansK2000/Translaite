@@ -13,6 +13,9 @@
 char registration_username[1024] = "";
 char registration_password[1024] = "";
 
+/**
+ * Draw the input boxes and action buttons
+ */ 
 void draw_register_screen()
 {
 	write_word(100, 70, "USERNAME:", BLACK, WHITE, LARGE);

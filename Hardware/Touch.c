@@ -91,26 +91,26 @@ void init_touch()
 	if (Touch_DivisorLatchMSB == NULL) {
 		printf("ERROR, Touch_DivisorLatchMSB was not correctly defined. Try again");
 	}
-
- // set bit 7 of Line Control Register to 1, to gain access to the baud rate registers
+	
+	// set bit 7 of Line Control Register to 1, to gain access to the baud rate registers
     *Touch_LineControlReg = 0x80;
-
- // set Divisor latch (LSB and MSB) with correct value for required baud rate
- // This is for baudrate of 9600
+	
+	// set Divisor latch (LSB and MSB) with correct value for required baud rate
+	// This is for baudrate of 9600
     *Touch_DivisorLatchLSB = 0x45;
     *Touch_DivisorLatchMSB = 0x01;
-
- // Reset bits to 0
+	
+	// Reset bits to 0
     *Touch_LineControlReg = 0x0;
-
- // set bit 7 of Line control register back to 0 and
- // program other bits in that reg for 8 bit data, 1 stop bit, no parity etc
+	
+	// set bit 7 of Line control register back to 0 and
+	// program other bits in that reg for 8 bit data, 1 stop bit, no parity etc
     *Touch_LineControlReg = 0x03;
 
- // Reset the Fifo’s in the FiFo Control Reg by setting bits 1 & 2
+	// Reset the Fifo’s in the FiFo Control Reg by setting bits 1 & 2
     *Touch_FifoControlReg = 0x06;
 
- // Now Clear all bits in the FiFo control registers
+	// Now Clear all bits in the FiFo control registers
     *Touch_FifoControlReg = 0x0;
 
     // Send the touch enable command
@@ -119,43 +119,42 @@ void init_touch()
     put_char_touch(0x12);
 }
 
-//
 int touch_test_for_received_data(void)
 {
- // if Touch_LineStatusReg bit 0 is set to 1
- //return TRUE, otherwise return FALSE
+	// if Touch_LineStatusReg bit 0 is set to 1
+	//return TRUE, otherwise return FALSE
     return ((*Touch_LineStatusReg >> Touch_LineStatusReg_DataReady) & 1) == 1;
 }
 
 int put_char_touch(int c)
 {
- // wait for Transmitter Holding Register bit (5) of line status register to be '1'
- // indicating we can write to the device
+	// wait for Transmitter Holding Register bit (5) of line status register to be '1'
+	// indicating we can write to the device
     while ((*Touch_LineStatusReg & 0x20) != 0x20) {
     }
-
- // write character to Transmitter fifo register
+	
+	// write character to Transmitter fifo register
     *Touch_TransmitterFifo = c;
-
- // return the character we printed
+	
+	// return the character we printed
     return c;
 }
 
 int get_char_touch( void )
 {
- // wait for Data Ready bit (0) of line status register to be '1'
+	// wait for Data Ready bit (0) of line status register to be '1'
     while(!touch_test_for_received_data()) {
     }
-
- // read new character from ReceiverFiFo register
- // return new character
+	
+	// read new character from ReceiverFiFo register
+	// return new character
     return *Touch_ReceiverFifo;
 }
 
 void touch_flush(void)
 {
- // while bit 0 of Line Status Register == ‘1’
- // read unwanted char out of fifo receiver buffer
+	// while bit 0 of Line Status Register == ‘1’
+	// read unwanted char out of fifo receiver buffer
     while(touch_test_for_received_data()) {
         int read = *Touch_ReceiverFifo;
         read += 1;

@@ -24,7 +24,6 @@ volatile unsigned char *Wifi_ScratchReg = NULL;
 volatile unsigned char *Wifi_DivisorLatchLSB = NULL;
 volatile unsigned char *Wifi_DivisorLatchMSB = NULL;
 
-/* START OF SERIAL PORT CODE */
 void init_wifi_serial()
 {
 
@@ -174,16 +173,16 @@ void flush_wifi(void)
     return; // no more characters so return
 }
 
-/* END OF SERIAL PORT CODE */
-
-int init_wifi(void) {
+int init_wifi(void)
+{
 	init_wifi_serial(virtual_base);
 	flush_wifi();
 	do_file();
 	return connect_wifi();
 }
 
-void do_file(void) {
+void do_file(void)
+{
 	char * command = "dofile(\"api.lua\")\r\n";
 	char buf[1024] = "";
 	lua_command_no_stars_short(command, buf);
@@ -191,7 +190,8 @@ void do_file(void) {
 	printf("%s\n", buf);
 }
 
-int connect_wifi(void) {
+int connect_wifi(void)
+{
 	char * command = "connect_wifi()\r\n";
 	char buf[1024] = "";
 	lua_command_stars(command, buf);
@@ -201,23 +201,12 @@ int connect_wifi(void) {
 	return strcmp("connect_wifi()\r\nOK_CONNECT\n", buf);
 }
 
-void write_to_file(void * data, char * str)
+topLevelParsed * translate(char* target_language, char* native_language)
 {
-	FILE * fp;
-
-	char* filename = (char *) data;
-	fp = fopen (filename, "w+");
-	if (fp == NULL) {
-		printf("ERROR! Could not create new file. Not enough memory or processing error!\n");
-	}
-    fprintf(fp, str);
-
-    fclose(fp);
-    printf("Write file closed\n");
-}
-
-topLevelParsed * translate(char* target_language, char* native_language) {
-
+	/*
+	 * Example command:
+	 * translate('french', 'english')
+	 */ 
 	char * command[80];
 	strcpy(command, "translate(\'");
 	strcat(command, target_language);
@@ -232,7 +221,12 @@ topLevelParsed * translate(char* target_language, char* native_language) {
 	return parse_translation_buffer(buf);
 }
 
-int register_user(char* username, char* password) {
+int register_user(char* username, char* password)
+{
+	/*
+	 * Example command:
+	 * register_user('user', 'password')
+	 */ 
 	char * command[80];
 	strcpy(command, "register_user(\'");
 	strcat(command, username);
@@ -247,7 +241,12 @@ int register_user(char* username, char* password) {
 	return parse_register_buffer(buf);
 }
 
-int user_login(char* username, char* password) {
+int user_login(char* username, char* password)
+{
+	/*
+	 * Example command:
+	 * user_login('user', 'password')
+	 */ 
 	char * command[80];
 	strcpy(command, "user_login(\'");
 	strcat(command, username);
@@ -262,10 +261,15 @@ int user_login(char* username, char* password) {
 	return parse_login_buffer(buf);
 }
 
-void play_audio(char* word, char* language) {
-
+void play_audio(char* word, char* language)
+{
+	// replace spaces with %20 for HTTP params
 	char * replaced = spaces_replaced(word);
 
+	/*
+	 * Example command:
+	 * play_audio("computer%20mouse", "english")
+	 */ 
 	char * command[100];
 	strcpy(command, "play_audio(\"");
 	strcat(command, replaced);
@@ -282,9 +286,14 @@ void play_audio(char* word, char* language) {
 
 int add_to_history(char * username, char * native_language, char * target_language, char * native_word, char * target_word)
 {
+	// replace spaces with %20 for HTTP requests
 	char * native_replaced = spaces_replaced(native_word);
 	char * target_replaced = spaces_replaced(target_word);
 
+	/*
+	 * Example command:
+	 * add_to_history("user", "english", "french", "cat", "chat")
+	 */ 
 	char * command[1024];
 	strcpy(command, "add_to_history(\"");
 	strcat(command, username);
@@ -310,9 +319,14 @@ int add_to_history(char * username, char * native_language, char * target_langua
 
 int remove_from_history(char * username, char * native_language, char * target_language, char * native_word, char * target_word)
 {
+	// replace spaces with %20 for HTTP requests
 	char * native_replaced = spaces_replaced(native_word);
 	char * target_replaced = spaces_replaced(target_word);
 
+	/*
+	 * Example command:
+	 * remove_from_history("user", "english", "french", "cat", "chat")
+	 */
 	char * command[1024];
 	strcpy(command, "remove_from_history(\"");
 	strcat(command, username);
@@ -338,6 +352,10 @@ int remove_from_history(char * username, char * native_language, char * target_l
 
 historyObj * get_user_history(char * username)
 {
+	/*
+	 * Example command:
+	 * add_to_history("user", "english", "french", "cat", "chat")
+	 */
 	char * command[1024];
 	strcpy(command, "get_user_history(\'");
 	strcat(command, username);
@@ -362,17 +380,22 @@ int open_bmp_sock()
 	return parse_open_sock_buffer(buf);
 }
 
-int get_country_from_coords(float lattitude, float longitude) 
+int get_country_from_coords(float latitude, float longitude) 
 {
-	
 	char * command[1024];
 	char * longVal[1024];
-	char * lattVal[1024];
-	snprintf(lattVal, sizeof(lattVal), "%.6f", lattitude);
+	char * latVal[1024];
+
+	// Convert floats to string for HTTP request
+	snprintf(latVal, sizeof(latVal), "%.6f", latitude);
 	snprintf(longVal, sizeof(longVal), "%.6f", longitude);
 
+	/*
+	 * Example command:
+	 * get_location('43.99', '-123.5')
+	 */
 	strcpy(command, "get_location(\'");
-	strcat(command, lattVal);
+	strcat(command, latVal);
 	strcat(command, "\',\'");
 	strcat(command, longVal);
 	strcat(command, "\')\r\n");
@@ -380,23 +403,20 @@ int get_country_from_coords(float lattitude, float longitude)
 	char buf[1024] = "";
 	lua_command_stars(command, buf);
 
-	printf("%s\n", buf);
-
 	return parse_location_buffer(buf);
 }
 
-// THIS FUNCTION WRITES AND READS FROM SERIAL PORT, DOES NOT WAIT FOR ****
-// GIVE IT A TIMEOUT. IF CODE HAS PERIODS OF SLEEPING, RECOMMEND TO USE LONG TIMEOUT VERSION OF THIS,
-// OTHERWISE YOU CAN USE THE SHORT VERSION OR JUST PASS IN YOUR OWN TIMEOUT
 int lua_command_no_stars(char * str, char * res, int timeout) {
 	int i;
 	int bytes_received = 0;
 	printf("executing %s\n", str);
 
+	// Put the command into the buffer
 	while (*str) {
 		put_char_wifi(*str);
 		str++;
 
+		// Get any data that may be coming back after writing the last char
 		for(i=0; i<1000; i++) {
 			if(wifi_test_for_received_data() == 1) {
 				res[bytes_received++] = get_char_wifi();
@@ -404,35 +424,28 @@ int lua_command_no_stars(char * str, char * res, int timeout) {
 		}
 	}
 
+	// Before the timeout expires, try to get data
 	int j;
 	for(j=0; j<timeout; j++){
 		if(wifi_test_for_received_data() == 1) {
 			res[bytes_received++] = get_char_wifi();
-			j=0;
+			j=0; // reset the timeout timer if you got data
 		}
 	}
 
-
-	printf("Got %u bytes\n", bytes_received);
 	res[bytes_received] = '\0';
 
 	return bytes_received;
 }
 
-// THIS FUNCTION WRITES AND READS FROM SERIAL PORT, DOES NOT WAIT FOR ****
-// SHORT TIMEOUT
 int lua_command_no_stars_short(char * str, char * res) {
 	return lua_command_no_stars(str, res, 200000);
 }
 
-// THIS FUNCTION WRITES AND READS FROM SERIAL PORT, DOES NOT WAIT FOR ****
-// LONG TIMEOUT
 int lua_command_no_stars_long(char * str, char * res) {
 	return lua_command_no_stars(str, res, 20000000);
 }
 
-// THIS FUNCTION WRITES AND READS FROM SERIAL PORT, WAITS FOR 4 CONSECUTIVE * CHARACTERS TO
-// INDICATE THE END OF A MESSAGE
 int lua_command_stars(char * str, char * res) {
 	int i;
 
@@ -450,16 +463,15 @@ int lua_command_stars(char * str, char * res) {
 			if(wifi_test_for_received_data() == 1) {
 				char c = get_char_wifi();
 
-				if (c == star) {
+				if (c == star) { // Start counting * characters
 					star_count++;
 
-					if (star_count == 4) {
-						printf("Got %u bytes\n", bytes_received);
+					if (star_count == 4) { // break if we received the last * character
 						res[bytes_received] = '\0';
 
 						return bytes_received;
 					}
-				} else {
+				} else { // reset the star counter
 					while(star_count > 0) {
 						res[bytes_received++] = star;
 						star_count--;
@@ -470,19 +482,18 @@ int lua_command_stars(char * str, char * res) {
 		}
 	}
 
-	for(i=0; i<30000000; i++) {
+	for(i=0; i<30000000; i++) { // start the timeout counter
 		if(wifi_test_for_received_data() == 1) {
 			char c = get_char_wifi();
 
-			if (c == star) {
+			if (c == star) { // start counting stars
 				star_count++;
-				if (star_count == 4) {
-					printf("Got %u bytes\n", bytes_received);
+				if (star_count == 4) { // stop receiving data because last star is received
 					res[bytes_received] = '\0';
 
 					return bytes_received;
 				}
-			} else {
+			} else { // reset the star counter
 				while(star_count > 0) {
 					res[bytes_received++] = star;
 					star_count--;
@@ -490,11 +501,10 @@ int lua_command_stars(char * str, char * res) {
 				res[bytes_received++] = c;
 			}
 
-			i = 0;
+			i = 0; // reset the timeout timer if we received data
 		}
 	}
-
-	printf("Got %u bytes\n", bytes_received);
+	
 	res[bytes_received] = '\0';
 
 	return bytes_received;

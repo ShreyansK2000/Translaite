@@ -47,7 +47,6 @@ int main(void)
 	}
 
 	// Initialize the wifi
-
 	loading_screen("INITIALIZING WIFI..");
 	if(!init_wifi()) {
 		return 0;

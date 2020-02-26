@@ -14,11 +14,21 @@
 
 #define ENTRIES_PER_PAGE 3
 
+/**
+ * History page globals
+ */ 
 int page_number_history = 0;
 int num_entries_history = 0;
 int num_pages_history = 0;
 int item_num_history = 0;
 
+/**
+ * Set the globals to correct values after item removals from pages
+ * to ensure the user lands on the right page afterwards
+ * 
+ * @param historyObj historyObj struct containing number of items information
+ * 					 with updated count after removal
+ */ 
 void refresh_globals(historyObj * historyObj)
 {
 	num_entries_history = historyObj->translationCount;
@@ -30,6 +40,13 @@ void refresh_globals(historyObj * historyObj)
 	num_pages_history = (ENTRIES_PER_PAGE + num_entries_history - 1) / ENTRIES_PER_PAGE;
 }
 
+/**
+ * Travels to the required node in history by index
+ * 
+ * @param historyObj the historyObj struct pointing to head of linkedlist
+ * @param num the index of the node to be returned
+ * @return historyObjectNode of the appropriate index
+ */ 
 historyObjectNode* go_to_translation_node(historyObj * historyObj, int num)
 {
 	int i;
@@ -40,7 +57,15 @@ historyObjectNode* go_to_translation_node(historyObj * historyObj, int num)
 	return curNode;
 }
 
-void draw_history_item(int item_num, historyObj * historyObj) {
+/**
+ * Draw uniform boxes for items translated to display on each page,
+ * max ENTRIES_PER_PAGE per item.
+ * 
+ * @param item_num The index of the item on the age
+ * @param historyObj The object containing the information about translations
+ */
+void draw_history_item(int item_num, historyObj * historyObj)
+{
 	int box_y1 = (100 * (item_num + 1) + item_num * 10);
 	int box_y2 = 200 + (110 * (item_num));
 
@@ -56,12 +81,14 @@ void draw_history_item(int item_num, historyObj * historyObj) {
 	draw_filled_box(580, 640, box_y1 + 20, box_y1 + 80, RED);
 	draw_filled_box(590, 630, box_y1 + 45, box_y1 + 55, WHITE);
 }
+
+/**
+ * Draw the main buttons and entries for the history screen
+ * 
+ * @param historyObj historyObj containing old translations
+ */
 void draw_history_screen(historyObj * historyObj)
 {
-	printf("PAGE NUMBER: %d\n", page_number_history);
-	printf("NUMBER OF ENTRIES: %d\n", num_entries_history);
-	printf("NUMBER OF PAGES: %d\n", num_pages_history);
-
 	draw_hollow_button(500, 750, 25, 75, return_button_trans[native_language], BLACK, WHITE, WHITE);
 
 	// Draw upwards arrow to go back 1 page
@@ -92,7 +119,16 @@ void draw_history_screen(historyObj * historyObj)
 	}
 }
 
-void handle_touch_history(int item_num_history, historyObj * historyObj, Point * touch) {
+/**
+ * Function to handle touch events in certain regions of the screen
+ * Controls audio requests, removal of translations
+ * 
+ * @param item_num_history item index on page
+ * @param historyObj historyObj containing information about the translations
+ * @param touch Pointer to the touch struct containing touch coordinates
+ */
+void handle_touch_history(int item_num_history, historyObj * historyObj, Point * touch)
+{
 	int node_idx = page_number_history * ENTRIES_PER_PAGE + item_num_history;
 	historyObjectNode * item = go_to_translation_node(historyObj, node_idx);
 	if (touch->x >= 5 && touch->x <= 570) {
@@ -117,10 +153,6 @@ void history_screen(historyObj * historyObj)
 	page_number_history = 0;
 	num_entries_history = historyObj->translationCount;
 	num_pages_history = (ENTRIES_PER_PAGE + num_entries_history - 1) / ENTRIES_PER_PAGE;
-	
-	printf("PAGE NUMBER: %d\n", page_number_history);
-	printf("NUMBER OF ENTRIES: %d\n", num_entries_history);
-	printf("NUMBER OF PAGES: %d\n", num_pages_history);
 
 	draw_history_screen(historyObj);
 	Point touch;

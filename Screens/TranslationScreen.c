@@ -22,6 +22,9 @@ int num_entries_trans = 0;
 int num_pages_trans = 0;
 int item_num = 0;
 
+/**
+ * Traverses the info linked list for the num'th node and returns it 
+ */
 objTransNode* go_to_info_node(topLevelParsed * info, int num) {
 	int i;
 	objTransNode* curNode = info->objects->head;
@@ -31,7 +34,12 @@ objTransNode* go_to_info_node(topLevelParsed * info, int num) {
 	return curNode;
 }
 
-void draw_translation_item(int item_num, topLevelParsed * info) {
+/**
+ * Draws a translation item on the screen. Will be positioned differently on the screen based on the
+ * number of the item.
+ */
+void draw_translation_item(int item_num, topLevelParsed * info)
+{
 	int box_y1 = (100 * (item_num + 1) + item_num * 10);
 	int box_y2 = 200 + (110 * (item_num));
 
@@ -49,16 +57,21 @@ void draw_translation_item(int item_num, topLevelParsed * info) {
 	draw_filled_box(605, 615, box_y1 + 30, box_y1 + 70, WHITE);
 }
 
+/**
+ * Draws the components on the translation screen (list of items, menu button, photo button)
+ */
 void draw_translation_screen(topLevelParsed * info)
 {
-	draw_hollow_button(300, 450, 25, 75, photos_trans[native_language], BLACK, WHITE, WHITE);
-	draw_hollow_button(500, 750, 25, 75, return_button_trans[native_language], BLACK, WHITE, WHITE);
+	draw_hollow_button(300, 450, 25, 75, photos_trans[native_language], BLACK, WHITE, WHITE); // Photo button
+	draw_hollow_button(500, 750, 25, 75, return_button_trans[native_language], BLACK, WHITE, WHITE); // Return button
 
+	// Draw the decrement page number button
 	if(page_number_trans > 0) {
 		draw_bordered_box(650, 750, 150, 250, 1, RED, BLACK);
 		draw_triangle(700, 170, 680, 220, 720, 220, BLACK);
 	}
 
+	// Draw the increment page number button
 	if(page_number_trans < (num_pages_trans - 1)) {
 		draw_bordered_box(650, 750, 260, 360, 1, LIME, BLACK);
 		draw_triangle(700, 340, 680, 280, 720, 280, BLACK);
@@ -80,9 +93,14 @@ void draw_translation_screen(topLevelParsed * info)
 	}
 }
 
-void handle_touch_translation(int item_num, topLevelParsed * info, Point * touch) {
+/**
+ * Event handler for pressing a translation item.
+ */
+void handle_touch_translation(int item_num, topLevelParsed * info, Point * touch)
+{
 	objTransNode * item = go_to_info_node(info, page_number_trans * ENTRIES_PER_PAGE + item_num);
-	if (touch->x >= 5 && touch->x <= 570) {
+	// Play audio touch event
+	if (touch->x >= 5 && touch->x <= 570) { 
 		loading_screen("PLAYING AUDIO...");
 		play_audio(item->translated, info->targetLanguage->val);
 		keep_loading = 0;
@@ -90,7 +108,9 @@ void handle_touch_translation(int item_num, topLevelParsed * info, Point * touch
 		clear_screen();
 		draw_translation_screen(info);
 
-	} else if (touch->x >= 580 && touch->x <= 640) {
+	}
+	// Add history touch event
+	else if (touch->x >= 580 && touch->x <= 640) {
 		// Save item item to user history
 		if(add_to_history(username, info->nativeLanguage->val, info->targetLanguage->val, item->native, item->translated) == NULLAddFailure) {
 			error_screen("Timed out waiting for server");
@@ -108,10 +128,6 @@ void translation_screen(topLevelParsed * info)
 	page_number_trans = 0;
 	num_entries_trans = info->objects->objectCount;
 	num_pages_trans = (ENTRIES_PER_PAGE + num_entries_trans - 1) / ENTRIES_PER_PAGE;
-
-	printf("PAGE NUM: %d\n", page_number_trans);
-	printf("NUM ENTRIES: %d\n", num_entries_trans);
-	printf("NUM_PAGES: %d\n", num_pages_trans);
 	
 	draw_translation_screen(info);
 	Point touch;

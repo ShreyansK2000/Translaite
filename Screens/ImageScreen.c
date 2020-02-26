@@ -3,6 +3,9 @@
 #include "../Hardware/Touch.h"
 #include "../Internet/Ethernet.h"
 
+/**
+ * Call helper to draw bitmap pixel by pixel
+ */ 
 void draw_image_screen()
 {
 	draw_bitmap_image("out.bmp", "out.txt");

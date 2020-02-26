@@ -15,6 +15,9 @@ const char * signout_trans[] = {"Sign out", "Deconnexion", "Desconectar", "Auslo
 const char * history_trans[] = {"History", "Histoire", "Historia", "Geschichte", "Storia"};
 const char * menu_languages[] = {"Languages", "Langages", "Idiomas", "Sprachen", "Le lingue"};
 
+/**
+ * Draw all the buttons on the main menu screen
+ */ 
 void draw_main_menu_screen()
 {
 	draw_filled_button(50, 375, 50, 440, takephotos_trans[native_language], RED, BLACK);

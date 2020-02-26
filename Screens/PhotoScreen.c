@@ -12,6 +12,10 @@
 
 const char * return_button_trans[] = {"Return", "Revenir", "Regreso", "Ruckkehr", "Ritorno"};
 
+/**
+ * Draw the camera button at the bottom of the screen 
+ * and back button at the top left
+ */ 
 void draw_photo_screen()
 {
 	//"Capture" button
@@ -41,7 +45,6 @@ void photo_screen()
 			if (info == NULL) {
 				error_screen("Timed out waiting for server");
 			} else {
-				printf("%s\n", info->objects->val);
 				translation_screen(info);
 				free_struct(info);
 			}

@@ -2,6 +2,9 @@
 #include "../Display/Graphics.h"
 #include "../Hardware/Touch.h"
 
+/**
+ * Draw the logo bitmap image pixel by pixel
+ */ 
 void draw_logo_screen()
 {
 	draw_bitmap_image("logo.bmp", "logo_palette.txt");

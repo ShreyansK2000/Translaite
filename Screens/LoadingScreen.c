@@ -10,6 +10,10 @@
 
 int keep_loading = 1;
 
+/**
+ * TODO : show loading animation/graphics
+ * Helper function to wait over load screen
+ */ 
 void *wait(void) {
 	clock_t start = clock();
 

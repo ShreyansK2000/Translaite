@@ -3,14 +3,14 @@
 
 #include "../Internet/Parse.h"
 
-/*
+/**
  * The language selection screen.
  *
  * Lets the user pick their native language and target language from translation.
  */
 void language_screen(void);
 
-/*
+/**
  * The main menu screen.
  *
  * Lets the user choose if they want to take a photo, change their language, sign out of their account,
@@ -18,7 +18,7 @@ void language_screen(void);
  */
 void main_menu_screen(void);
 
-/*
+/**
  * The photo request screen.
  *
  * TODO: Add a livestream of the camera attached to the Raspberry Pi.
@@ -27,7 +27,7 @@ void main_menu_screen(void);
  */
 void photo_screen(void);
 
-/*
+/**
  * The user history screen.
  *
  * Lets the user view all the translations they have made and saved. They can send requests to the server to listen
@@ -35,7 +35,7 @@ void photo_screen(void);
  */
 void history_screen(historyObj * historyObj);
 
-/*
+/**
  * The translation screen.
  *
  * Displays the translations of the objects detected by the server from the photo taken by the Raspberry Pi. This screen
@@ -44,7 +44,7 @@ void history_screen(historyObj * historyObj);
  */
 void translation_screen(topLevelParsed * info);
 
-/*
+/**
  * The loading screen.
  *
  * Displays a string to indicate some kind of loading. This function spawns a new thread and polls a flag that indicates
@@ -52,14 +52,14 @@ void translation_screen(topLevelParsed * info);
  */
 void loading_screen(char* loading_message);
 
-/*
+/**
  * The log in screen.
  *
  * Allows the user to enter their username and password, or navigate to the registration screen upon bootup.
  */
 void login_screen();
 
-/*
+/**
  * The registration screen.
  *
  * Allows the user to enter a username and password, and register for a new account. They can also navigate back to the
@@ -67,21 +67,21 @@ void login_screen();
  */
 void register_screen();
 
-/*
+/**
  * The logo screen.
  *
  * Displays a BMP image on the touch screen. Waits for the user to touch the screen before returning.
  */
 void logo_screen();
 
-/*
+/**
  * The keyboard screen.
  *
  * Allows the user to type a word and populates the string that is passed in.
  */
 void keyboard_screen(char * toPopulate);
 
-/*
+/**
  * The image screen.
  *
  * Allows the user to view the image taken by the Raspberry Pi. The image contains bounding boxes and annotations.
@@ -91,7 +91,7 @@ void keyboard_screen(char * toPopulate);
  */
 void image_screen(int download_image);
 
-/*
+/**
  * The error screen.
  *
  * Given an error message, displays a prompt with the error message. Waits for the user to close the prompt

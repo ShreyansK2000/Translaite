@@ -23,15 +23,21 @@ const char *keysRowMajor[26] = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"
 							 	"a", "s", "d", "f", "g", "h", "j", "k", "l",
 							 	"z", "x", "c", "v", "b", "n", "m"};
 
+/**
+ * Helper function for truth value, don't erase if length <= 0
+ */ 
 int should_accept_erase(int wordLen) {
 	return wordLen > 0;
 }
 
+/**
+ * Helper function for truth value, don't take input if length >= max_length
+ */ 
 int should_accept_input(int wordLen) {
 	return wordLen < MAX_INPUT_COUNT;
 }
 
-/*
+/**
  * Update the max char count at the top right of the screen. Changes the colour of the font to indicate if
  * the user is reaching the maximum limit.
  */
@@ -57,7 +63,7 @@ void draw_char_count(int wordLen) {
 	free(text);
 }
 
-/*
+/**
  * Update the user input field given the pointer to the string
  */
 void draw_user_input(char * toPopulate)
@@ -66,8 +72,8 @@ void draw_user_input(char * toPopulate)
 	write_word(MARGIN+10, TOP_ROW-2*KEY_WIDTH + KEY_WIDTH/4 + 5, toPopulate, WHITE, BLACK, LARGE);
 }
 
-/*
- * Draws all the keys and special keys
+/**
+ * Draw all the keys and special keys
  */
 void draw_keyboard()
 {
@@ -88,7 +94,7 @@ void draw_keyboard()
 	draw_hollow_button(MARGIN + KEY_WIDTH*9, MARGIN + KEY_WIDTH*10, BOT_ROW, BOT_ROW + KEY_WIDTH, "CANCEL", BLACK, WHITE, WHITE);
 }
 
-/*
+/**
  * Draw all the components of the keyboard screen (Keyboard, user input, character count)
  */
 void draw_keyboard_screen(char * toPopulate)
