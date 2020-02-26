@@ -1,0 +1,25 @@
+INSTRUCTIONS FOR GENERATING A BMP FILE AND THE PALETTE FILE:
+
+-----GENERATING THE BMP FILE----------
+IN GIMP:
+1) Open the file of the image you want to display
+2) Image > Scale Image
+	i) Click the little chain symbol to the right of Width and Height to unlink the properties
+	ii) Set Width to 800
+	iii) Set Height to 480
+	iv) Click Scale
+3) File > Export > Rename to filename.bmp
+4) Image > Mode > Indexed
+	i) Select Generate optimum palette and set max number of colours to 64
+	ii) Click Convert
+5) File > Export to filename.bmp
+--------------------------------------
+
+-----GENERATING THE PALETTE FILE------
+IN GIMP
+1) Open the file of the image you want to display
+2) Windows > Dockable Dialogs > Palettes
+	i) This should open a new palette window
+	ii) In the scrolldown, find something that looks like Colormap of Image #1(64)
+	iii) Right click this > export as > text file > name it > Save
+--------------------------------------
