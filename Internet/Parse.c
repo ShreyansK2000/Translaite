@@ -171,8 +171,12 @@ topLevelParsed * parse_translation_buffer(char *str)
     outObjs * nativeLanguage = malloc(sizeof(outObjs));
 
     objects->head = NULL;
+
     targetLanguage->head = NULL;
+    targetLanguage->objectCount = 0;
+
     nativeLanguage->head = NULL;
+    nativeLanguage->objectCount = 0;
 
     /*
      * Call getQtoQ and getParam once for each outer level key in the JSON object

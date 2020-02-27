@@ -1,0 +1,18 @@
+> get_user_history('eddy')
+> {
+
+  "history": [
+    {
+      "native": "Person",
+      "native_language": "german",
+      "target_language": "italian",
+      "translated": "Persona"
+    },
+    {
+      "native": "person",
+      "native_language": "english",
+      "target_language": "french",
+      "translated": "Personne"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+translate('French','English')
+> {
+  "nativeLanguage": "english",
+  "objects": [
+    {
+      "native": "Laptop",
+      "translated": "Ordinateur portable"
+    },
+    {
+      "native": "person",
+      "translated": "Personne"
+    }
+  ],
+  "targetLanguage": "french"
+}
