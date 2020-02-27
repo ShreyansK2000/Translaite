@@ -99,4 +99,11 @@ void image_screen(int download_image);
  */
 void error_screen(char * message);
 
+/**
+ * The test screen.
+ *
+ * A big green button to start the unit tests
+ */
+void test_screen(void);
+
 #endif /* SCREENS_H__*/

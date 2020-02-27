@@ -132,7 +132,12 @@ void handle_touch_history(int item_num_history, historyObj * historyObj, Point *
 	int node_idx = page_number_history * ENTRIES_PER_PAGE + item_num_history;
 	historyObjectNode * item = go_to_translation_node(historyObj, node_idx);
 	if (touch->x >= 5 && touch->x <= 570) {
+		loading_screen("PLAYING AUDIO...");
 		play_audio(item->target_word, item->target_language);
+		keep_loading = 0;
+
+		clear_screen();
+		draw_history_screen(historyObj);
 	} else if (touch->x >= 580 && touch->x <= 640) {
 		// Save item item to user history
 		if (remove_from_history(username, item->native_language, item->target_language, item->native_word, item->target_word) == NULLRemoveFailure) {

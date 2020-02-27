@@ -16,9 +16,33 @@
 int target_language = FRENCH;
 int native_language = ENGLISH;
 void * virtual_base = NULL;
+enum user_modes user_mode = User;
 
-int main(void)
+int main(int argc, char **argv)
 {
+	// Check for count of arguments. Must be 2
+	if (argc != 2) {
+		printf("Expected 2 arguments, got %d\n", argc);
+		printf("Usage: module1 <usermode>\n");
+		printf("usermode:\n\t-t : Test\n");
+		printf("\t-u : User\n");
+		return 0;
+	} else {
+		if (!strcmp(argv[1],"-t")) {
+			user_mode =  Test;
+		} else if (!strcmp(argv[1],"-u")) {
+			user_mode = User;
+		} else {
+			printf("Unknown argument %s\n", argv[1]);
+			printf("Usage: module1 <usermode>\n");
+			printf("usermode:\n\t-t : Test\n");
+			printf("\t-u : User\n");
+			return 0;
+		}
+
+		printf("Set user mode to: %d\n", user_mode);
+	}
+
 	int fd;
 
 	// Open memory as if it were a device for read and write access
@@ -37,7 +61,7 @@ int main(void)
 		return(1);
 	}
 
-	// Initialize the wifi
+	// Initialize the Touch screen
 	init_touch();
 	touch_flush();
 
@@ -53,8 +77,20 @@ int main(void)
 	}
 	keep_loading = 0;
 
-	// Draw the logo screen
-	logo_screen();
+	switch(user_mode) {
+	// Test mode
+	case Test:
+		test_screen();
+		break;
+	// User mode
+	case User:
+		logo_screen();
+		break;
+	// Break on default, dont show anything
+	default:
+		printf("Mode %d not implemented yet\n", user_mode);
+		break;
+	}
 
 	return 0;
 }

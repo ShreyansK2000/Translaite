@@ -10,7 +10,7 @@
 #include "../Internet/WiFi.h"
 #include "../Internet/Parse.h"
 #include "../Global.h"
-#include "../Internet/GPS.h"
+#include "../Hardware/GPS.h"
 
 #include "../Translations.h"
 
@@ -69,13 +69,14 @@ void login_screen()
 
 			enum login_response_state state = user_login(username, password);
 			if (state == LoginSuccess) {
+
 				// GPS fetch location, set language
 				loading_screen("GPS values initializing. Please wait.");
-				init_gps();
-
-				native_language = get_country_from_coords(get_latitude(), get_longitude());
-
+				if (init_gps()) {
+					native_language = get_country_from_coords(get_latitude(), get_longitude());
+				}
 				keep_loading = 0;
+
 				main_menu_screen();
 				return;
 			} else {

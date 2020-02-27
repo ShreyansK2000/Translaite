@@ -26,4 +26,10 @@ extern char password[1024];
 // LINUX asssigned virtual address space base
 extern void * virtual_base;
 
+// User modes
+enum user_modes {Test = 0, User = 1};
+
+// User mode for different gui
+extern enum user_modes user_mode;
+
 #endif /* GLOBAL_H__ */
