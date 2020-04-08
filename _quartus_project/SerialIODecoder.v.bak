@@ -1,0 +1,97 @@
+
+module M68xxIODecoder_Verilog (
+		input unsigned [15:0] Address,
+		input IOSelect_H,
+		input ByteSelect_L,
+		input WE_L,
+		
+		output reg RS232_Port_Enable,
+		output reg RS232_Baud_Enable,
+		output reg GPS_Port_Enable,
+		output reg GPS_Baud_Enable,
+		output reg Bluetooth_Port_Enable,
+		output reg Bluetooth_Baud_Enable,
+		output reg TouchScreen_Port_Enable,
+		output reg TouchScreen_Baud_Enable
+	);
+
+	always@(Address, IOSelect_H, ByteSelect_L, WE_L) begin
+		
+		// default values for the IO chip enables (default = disabled)
+		// they are overridden below when necessary - default values for outputs avoids inferring latches in VHDL 
+		// so we must do it for all our outputs
+		
+		RS232_Port_Enable <= 0 ;
+		RS232_Baud_Enable <= 0 ;
+		
+		GPS_Port_Enable <= 0 ;
+		GPS_Baud_Enable <= 0 ;
+		
+		Bluetooth_Port_Enable <= 0 ;
+		Bluetooth_Baud_Enable <= 0 ;
+		
+		TouchScreen_Port_Enable <= 0 ;
+		TouchScreen_Baud_Enable <= 0 ;
+		
+// IOSelect_H is driven logic 1 whenever the CPU outputs an address in the range A31:A0 = hex [FF21_0000] to [FF21_FFFF]
+// that is, IOSelect_H is drive logic for all addresses in range [FF21_XXXX]. All we have to do for IO chip is decode the XXXX into 
+// a smaller  chip selects, i.e. A15:A0. All addresses for our chips should be even address as they are byte wide and connected to 
+// the upper half of the data bus (ByteSelect_L is asserted for an even byte transfer of D15-D8
+
+// decoder for the 1st 6850 chip (RS232 Port) - 2 registers at locations 0xFF21 0200 and 0xFF21 0202 so that they occupy
+// same half of data bus on D15-D8 and ByteSelect_L = 0
+// decoder for the Baud Rate generator at 00xFF21_0204 on D15-D8 and ByteSelect_L = 0
+
+		if(IOSelect_H == 1) begin
+			if((Address[15:4] == 12'h020) && ByteSelect_L == 0) begin		// address = hex 0xFF21_020X
+			    if((Address[3:0] == 4'h0) || (Address[3:0] == 4'h2)) 		// address = hex 0xFF21_0200 or 0202
+					RS232_Port_Enable <= 1 ;											// enable the serial ACIA device
+				
+				if(Address[3:0] == 4'h4) 												// enable baud rate generator at address = hex FF21_0204
+					RS232_Baud_Enable <= 1 ;
+			end
+		end		
+	
+// decoder for the 2nd 6850 chip (GPS)- 2 registers at locations 0xFF21_0210 and 0xFF21_0212 so that they occupy same half 
+// of data bus on D15-D8 and ByteSelect_L = 0
+// decoder for the Baud Rate generator at 0xFF21_0214 on D15-D8 and ByteSelect_L = 0
+	
+		if(IOSelect_H == 1) begin
+			if((Address[15:4] == 12'h021) && ByteSelect_L == 0) begin		// address = 0xFF21_021X
+			   if((Address[3:0] == 4'h0) || (Address[3:0] == 4'h2)) 			// address = 0xFF21_0210 or 0212
+					GPS_Port_Enable <= 1 ;												// enable the serial ACIA device
+								
+				if(Address[3:0] == 4'h4) 												// enable baud rate generator at address = 0xFF21_0214
+					GPS_Baud_Enable <= 1 ;
+			end
+		end		
+
+// decoder for the 3rd 6850 chip (BlueTooth)- 2 registers at locations 0xFF21_0220 and 0xFF21_0222 so that they occupy 
+// same half of data bus on D15-D8 and ByteSelect_L = 0
+// decoder for the Baud Rate generator at 0xFF21_0224 on D15-D8 and ByteSelect_L = 0
+	
+		if(IOSelect_H == 1) begin
+			if((Address[15:4] == 12'h022) && ByteSelect_L == 0) begin		// address = 0xFF21_022X
+			    if((Address[3:0] == 4'h0) || (Address[3:0] == 4'h2)) 		// address = 0xFF21_220 or 0222
+					Bluetooth_Port_Enable <= 1 ;										// enable the serial ACIA device
+				
+				if(Address[3:0] == 4'h4) 												// enable baud rate generator at address = hex 8400_0224
+					Bluetooth_Baud_Enable <= 1 ;
+			end
+		end		
+		
+// decoder for the 4th 6850 chip (Touch Screen)- 2 registers at locations 0xFF21_0230 and 0xFF21_0232 so that they occupy 
+// same half of data bus on D15-D8 and ByteSelect_L = 0
+// decoder for the Baud Rate generator at 0xFF21_0234 on D15-D8 and ByteSelect_L = 0
+	
+		if(IOSelect_H == 1) begin
+			if((Address[15:4] == 12'h023) && ByteSelect_L == 0) begin		// address = 0xFF21_023X
+			    if((Address[3:0] == 4'h0) || (Address[3:0] == 4'h2)) 		// address = 0xFF21_0230 or 0232
+					TouchScreen_Port_Enable <= 1 ;									// enable the serial ACIA device
+				
+				if(Address[3:0] == 4'h4) 												// enable baud rate generator at address = 0xFF21_0234
+					TouchScreen_Baud_Enable <= 1 ;
+			end
+		end
+	end
+endmodule

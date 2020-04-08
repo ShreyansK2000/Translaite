@@ -1,0 +1,281 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=24;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+CONTENT BEGIN
+	000 : 000000; -- Black
+	001 : FFFFFF; -- White
+	002 : FF0000; -- Red
+	003 : 00FF00; -- Green/Lime
+	004 : 0000FF; -- Blue
+	005 : FFFF00; -- Yellow
+	006 : 00FFFF; -- Cyan
+	007 : FF00FF; -- Magenta
+	008 : C0C0C0; -- Silver
+	009 : 808080; -- Gray
+	010 : 800000; -- Maroon
+	011 : 808000; -- Olive
+	012 : 008000; -- DarkGreen
+	013 : 800080; -- Purple
+	014 : 008080; -- Teal
+	015 : 000080; -- Navy				
+	016 : 8B0000; -- Dark Red
+	017 : A52A2A; -- Brown
+	018 : B22222; -- FireBrick
+	019 : DC143C; -- Crimson
+	020 : FF6347; -- Tomato
+	021 : FF7F50; -- Coral
+	022 : Cd5C5C; -- Indian Red
+	023 : F08080; -- Light Coral
+	024 : E9967A; -- Dark Salmon
+	025 : FA8072; -- Salmon
+	026 : FFA07A; -- Light Salmon
+	027 : FF4500; -- Orange Red
+	028 : FF8C00; -- Dark Orange
+	029 : FFA500; -- Orange
+	030 : FFD700; -- Gold
+	031 : B8860B; -- Dark Golden Rod
+	032 : DAA520; -- Golden Rod
+	033 : EEE8AA; -- Pale Golden Rod
+	034 : BDB76B; -- Dark Kharki
+	035 : F0E68C; -- Khaki
+	036 : 808000; -- Olive
+	037 : FFFF00; -- Yellow
+	038 : 9ACD32; -- Yellow Green
+	039 : 556B2F; -- Dark Olive Green
+	040 : 6B8E23; -- Olive Drab
+	041 : 7CFC00; -- Lawn Green
+	042 : 7FFF00; -- Chart Reuse
+	043 : ADFF2F; -- Green Yellow
+	044 : 006400; -- Dark Green
+	045 : 008000; -- Green
+	046 : 228B22; -- Forest Green
+	047 : 00FF00; -- Green/Lime
+	048 : 32CD32; -- Lime Green
+	049 : 90EE90; -- Light Green
+	050 : 98FB98; -- Pale Green
+	051 : 8FBC8F; -- Dark See Green
+	052 : 00FA9A; -- Medium Spring Green
+	053 : 00FF7F; -- Spring Green
+	054 : 2E8B57; -- Sea Green
+	055 : 66CDAA; -- Medium Aqua Marine
+	056 : 3CB371; -- Medium Sea Green
+	057 : 20B2AA; -- Light Sea Green
+	058 : 2F4F4F; -- Dark Slate Gray
+	059 : 008080; -- Teal
+	060 : 008B8B; -- Dark Cyan
+	061 : 00FFFF; -- Aqua/Cyan
+	062 : E0FFFF; -- Light Cyan
+	063 : 00CED1; -- Dark Turquise
+	064 : 40E0D0; -- Turquoise
+	065 : 48D1CC; -- Medium Turquoise
+	066 : AFEEEE; -- Pale Turquoise
+	067 : 7FFFD4; -- Aqua Marine
+	068 : B0E0E6; -- Powder Blue
+	069 : 5F9EA0; -- Cadet Blue
+	070 : 4682B4; -- Steel Blue
+	071 : 6495ED; -- Corn Flower Blue
+	072 : 00BFFF; -- Deep Sky Blue
+	073 : 1E90FF; -- Dodger Blue
+	074 : ADD8E6; -- Light Blue
+	075 : 87CEEB; -- Sky Blue
+	076 : 87CEFA; -- Light Sky Blue
+	077 : 191970; -- Midnight Blue
+	078 : 000080; -- Navy
+	079 : 00008B; -- Bark Blue
+	080 : 0000CD; -- Medium Blue
+	081 : 0000FF; -- Blue
+	082 : 4169E1; -- Royal Blue
+	083 : 8A2BE2; -- Blue Violet
+	084 : 4B0082; -- Indigo
+	085 : 483D8B; -- Dark Slate Blue
+	086 : 6A5ACD; -- Slate Blue
+	087 : 7B68EE; -- Medium Slate Blue
+	088 : 9370DB; -- Medium Purple
+	089 : 8B008B; -- Dark Magenta
+	090 : 9400D3; -- Dark Violet
+	091 : 9932CC; -- Dark Orchid"
+	092 : BA55D3; -- Medium Orchid
+	093 : 800080; -- Purple
+	094 : D8BFD8; -- Thistle
+	095 : DDA0DD; -- Plum
+	096 : EE82EE; -- Violet
+	097 : FF00FF; -- Magenta/Fuchia
+	098 : DA70D6; -- Orchid
+	099 : C71585; -- Medium Violet Red
+	100 : DB7093; -- Pale Violet Red
+	101 : FF1493; -- Deep Pink
+	102 : FF69B4; -- Hot Pink
+	103 : ffB6C1; -- Light Pink
+	104 : FFC0CB; -- Pink
+	105 : FAEBD7; -- Antique White
+	106 : F5F5DC; -- Beige
+	107 : FFE4C4; -- Bisque
+	108 : FFEBCD; -- Blanched Almond
+	109 : F5DEB3; -- Wheat
+	110 : FFF8DC; -- Corn Silk
+	111 : FFFACD; -- Lemon Chiffon
+	112 : FAFAD2; -- Light Golden Rod Yellow
+	113 : FFFFE0; -- Light Yellow
+	114 : 8B4513; -- Saddle Brown
+	115 : A0522D; -- Sienna
+	116 : D2691E; -- Chocolate
+	117 : CD853F; -- Peru
+	118 : F4A460; -- Sandy Brown
+	119 : DEB887; -- Burley Wood
+	120 : D2B48C; -- Tan
+	121 : BC8F8F; -- Rosy Tan
+	122 : FFE4B5; -- Moccasin
+	123 : FFDEAD; -- Navajo White
+	124 : FFDAB9; -- Peach Puff
+	125 : FFE4E1; -- Misty Rose
+	126 : FFF0F5; -- Lavendar Blush
+	127 : FAF0E6; -- Linen
+	128 : FDF5E6; -- Old Lace
+	129 : FFEFD5; -- Papaya Whip
+	130 : FFF5EE; -- Sea Shell
+	131 : F5FFFA; -- Mint Cream
+	132 : 708090; -- Slate Gray
+	133 : 778899; -- Light Slate Gray
+	134 : B0C4DE; -- Light Steel Blue
+	135 : E6E6FA; -- Lavender
+	136 : FFFAF0; -- Floral White
+	137 : F0F8FF; -- Alice Blue
+	138 : F8F8FF; -- Ghost White
+	139 : F0FFF0; -- Honey Dew
+	140 : FFFFF0; -- Ivory
+	141 : F0FFFF; -- Azure
+	142 : FFFAFA; -- Snow
+	143 : 000000; -- Black
+	144 : 696969; -- Dim Gray
+	145 : 808080; -- Gray
+	146 : A9A9A9; -- Dark Gray
+	147 : D3D3D3; -- Light Gray
+	148 : DCDCDC; -- GainsBoro
+	149 : F5F5F5; -- White Smoke
+	150 : FFFFFF; -- White
+
+-- Repeating colour - change these if you like
+	151 : 000000; -- Black
+	152 : FFFFFF; -- White
+	153 : FF0000; -- Red
+	154 : 00FF00; -- Green/Lime
+	155 : 0000FF; -- Blue
+	156 : FFFF00; -- Yellow
+	157 : 00FFFF; -- Cyan
+	158 : FF00FF; -- Magenta
+	159 : C0C0C0; -- Silver
+	160 : 808080; -- Gray
+	161 : 800000; -- Maroon
+	162 : 808000; -- Olive
+	163 : 008000; -- DarkGreen
+	164 : 800080; -- Purple
+	165 : 008080; -- Teal
+	166 : 000080; -- Navy				
+	167 : 8B0000; -- Dark Red
+	168 : A52A2A; -- Brown
+	169 : B22222; -- FireBrick
+	170 : DC143C; -- Crimson
+	171 : FF6347; -- Tomato
+	172 : FF7F50; -- Coral
+	173 : Cd5C5C; -- Indian Red
+	174 : F08080; -- Light Coral
+	175 : E9967A; -- Dark Salmon
+	176 : FA8072; -- Salmon
+	177 : FFA07A; -- Light Salmon
+	178 : FF4500; -- Orange Red
+	179 : FF8C00; -- Dark Orange
+	180 : FFA500; -- Orange
+	181 : FFD700; -- Gold
+	182 : B8860B; -- Dark Golden Rod
+	183 : DAA520; -- Golden Rod
+	184 : EEE8AA; -- Pale Golden Rod
+	185 : BDB76B; -- Dark Kharki
+	186 : F0E68C; -- Khaki
+	187 : 808000; -- Olive
+	188 : FFFF00; -- Yellow
+	189 : 9ACD32; -- Yellow Green
+	190 : 556B2F; -- Dark Olive Green
+	191 : 6B8E23; -- Olive Drab
+	192 : 7CFC00; -- Lawn Green
+	193 : 7FFF00; -- Chart Reuse
+	194 : ADFF2F; -- Green Yellow
+	195 : 006400; -- Dark Green
+	196 : 008000; -- Green
+	197 : 228B22; -- Forest Green
+	198 : 00FF00; -- Green/Lime
+	199 : 32CD32; -- Lime Green
+	200 : 90EE90; -- Light Green
+	201 : 98FB98; -- Pale Green
+	202 : 8FBC8F; -- Dark See Green
+	203 : 00FA9A; -- Medium Spring Green
+	204 : 00FF7F; -- Spring Green
+	205 : 2E8B57; -- Sea Green
+	206 : 66CDAA; -- Medium Aqua Marine
+	207 : 3CB371; -- Medium Sea Green
+	208 : 20B2AA; -- Light Sea Green
+	209 : 2F4F4F; -- Dark Slate Gray
+	210 : 008080; -- Teal
+	211 : 008B8B; -- Dark Cyan
+	212 : 00FFFF; -- Aqua/Cyan
+	213 : E0FFFF; -- Light Cyan
+	214 : 00CED1; -- Dark Turquise
+	215 : 40E0D0; -- Turquoise
+	216 : 48D1CC; -- Medium Turquoise
+	217 : AFEEEE; -- Pale Turquoise
+	218 : 7FFFD4; -- Aqua Marine
+	219 : B0E0E6; -- Powder Blue
+	220 : 5F9EA0; -- Cadet Blue
+	221 : 4682B4; -- Steel Blue
+	222 : 6495ED; -- Corn Flower Blue
+	223 : 00BFFF; -- Deep Sky Blue
+	224 : 1E90FF; -- Dodger Blue
+	225 : ADD8E6; -- Light Blue
+	226 : 87CEEB; -- Sky Blue
+	227 : 87CEFA; -- Light Sky Blue
+	228 : 191970; -- Midnight Blue
+	229 : 000080; -- Navy
+	230 : 00008B; -- Bark Blue
+	231 : 0000CD; -- Medium Blue
+	232 : 0000FF; -- Blue
+	233 : 4169E1; -- Royal Blue
+	234 : 8A2BE2; -- Blue Violet
+	235 : 4B0082; -- Indigo
+	236 : 483D8B; -- Dark Slate Blue
+	237 : 6A5ACD; -- Slate Blue
+	238 : 7B68EE; -- Medium Slate Blue
+	239 : 9370DB; -- Medium Purple
+	240 : 8B008B; -- Dark Magenta
+	241 : 9400D3; -- Dark Violet
+	242 : 9932CC; -- Dark Orchid
+	243 : BA55D3; -- Medium Orchid
+	244 : 800080; -- Purple
+	245 : D8BFD8; -- Thistle
+	246 : DDA0DD; -- Plum
+	247 : EE82EE; -- Violet
+	248 : FF00FF; -- Magenta/Fuchia
+	249 : DA70D6; -- Orchid
+	250 : C71585; -- Medium Violet Red
+	251 : DB7093; -- Pale Violet Red
+	252 : FF1493; -- Deep Pink
+	253 : FF69B4; -- Hot Pink
+	254 : ffB6C1; -- Light Pink
+	255 : FFC0CB; -- Pink
+END;

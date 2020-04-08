@@ -1,0 +1,472 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk_vga'
+Slack : -13.940
+TNS   : -337.487
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.272
+TNS   : -1507.547
+
+Type  : Slow 1100mV 85C Model Setup 'clk_dram'
+Slack : -3.264
+TNS   : -115.176
+
+Type  : Slow 1100mV 85C Model Setup 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.730
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.076
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 8.003
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 25.983
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.658
+TNS   : -57.898
+
+Type  : Slow 1100mV 85C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.228
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk_vga'
+Slack : 8.719
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk_dram'
+Slack : 9.028
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 10.053
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 14.423
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.552
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.664
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.608
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.623
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.771
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.868
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 9.854
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.396
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 15.859
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clk_vga'
+Slack : -13.450
+TNS   : -327.094
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.140
+TNS   : -799.956
+
+Type  : Slow 1100mV 0C Model Setup 'clk_dram'
+Slack : -3.026
+TNS   : -106.539
+
+Type  : Slow 1100mV 0C Model Setup 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.459
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 8.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.240
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.961
+TNS   : -62.926
+
+Type  : Slow 1100mV 0C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk_vga'
+Slack : 8.493
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk_dram'
+Slack : 8.887
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.468
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 10.337
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 14.536
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.493
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.606
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.630
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.900
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 9.815
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.374
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 15.840
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk_vga'
+Slack : -8.564
+TNS   : -206.612
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -0.525
+TNS   : -1.715
+
+Type  : Fast 1100mV 85C Model Setup 'clk_dram'
+Slack : 1.547
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 9.734
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 11.429
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 28.467
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -1.635
+TNS   : -25.414
+
+Type  : Fast 1100mV 85C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.139
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk_vga'
+Slack : 4.614
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk_dram'
+Slack : 5.064
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.727
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 13.941
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 15.639
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.475
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.882
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 9.908
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.312
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 16.206
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk_vga'
+Slack : -8.065
+TNS   : -194.399
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -0.258
+TNS   : -0.473
+
+Type  : Fast 1100mV 0C Model Setup 'clk_dram'
+Slack : 1.895
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 10.195
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 12.218
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 29.050
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.082
+TNS   : -32.846
+
+Type  : Fast 1100mV 0C Model Hold 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk_vga'
+Slack : 4.290
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk_dram'
+Slack : 4.770
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.825
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 14.347
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 15.857
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPEN391_Computer:u0|CPEN391_Computer_ARM_A9_HPS:arm_a9_hps|CPEN391_Computer_ARM_A9_HPS_hps_io:hps_io|CPEN391_Computer_ARM_A9_HPS_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.894
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.431
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|system_pll|sys_pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 9.906
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.293
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'GraphicsController1|inst12|vga_clock_gen_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 16.199
+TNS   : 0.000
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------

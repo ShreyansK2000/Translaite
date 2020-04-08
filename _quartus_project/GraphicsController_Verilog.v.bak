@@ -1,0 +1,30 @@
+module  GraphicsController_Verilog (
+ 
+		input unsigned [15:0] AddressIn,								// CPU 32 bit address bus
+		input unsigned [15:0] DataInFromCPU, 						// 16 bit data bus from CPU
+
+  		input Clk, Reset_L,
+		input AS_L, UDS_L, LDS_L, RW,
+		input GraphicsCS_L,	 											// CS from main computer address decoder
+		input HSync_L, VSync_L,											// Horizontal sync from VGA controller
+		input unsigned [15:0] SRam_DataIn,							// 16 bit data bus in from Sran
+		input unsigned [7:0] CharGenDataFont1,						// data from character generator
+		input unsigned [15:0] CharGenDataFont2,					// data from character generator
+		
+// Sram output signals
+		
+		output reg unsigned [9:0] VScrollValue,  					// scroll value for terminal emulation (allows screen scrolling up/down)
+		output reg unsigned [9:0] HScrollValue,   				// scroll value for terminal emulation (allows screen scrolling left/right)
+		output reg unsigned [15:0] DataOutToCPU,					// 16 bit data bus to CPU
+		output reg unsigned [17:0] Sram_AddressOut,				// graphics controller address out 256k locations = 18 address lines
+		output reg unsigned [15:0] Sram_DataOut,					// graphics controller Data out
+		
+		output reg Sram_UDS_Out_L, 
+		output reg Sram_LDS_Out_L, 
+		output reg Sram_RW_Out,	
+		
+		output reg unsigned [7:0] ColourPalletteAddr,
+		output reg unsigned [31:0] ColourPalletteData,	
+		output reg ColourPallette_WE_H,	
+		output reg unsigned [10:0] CharGenAddr						// 10 bit address	
+	);

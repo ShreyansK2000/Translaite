@@ -1,0 +1,265 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 312 256)
+	(text "GraphicsController_Verilog" (rect 5 0 112 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "AddressIn[15..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "AddressIn[15..0]" (rect 21 27 87 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DataInFromCPU[15..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "DataInFromCPU[15..0]" (rect 21 43 113 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Clk" (rect 0 0 12 12)(font "Arial" ))
+		(text "Clk" (rect 21 59 33 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Reset_L" (rect 0 0 36 12)(font "Arial" ))
+		(text "Reset_L" (rect 21 75 57 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "AS_L" (rect 0 0 25 12)(font "Arial" ))
+		(text "AS_L" (rect 21 91 46 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "UDS_L" (rect 0 0 31 12)(font "Arial" ))
+		(text "UDS_L" (rect 21 107 52 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "LDS_L" (rect 0 0 30 12)(font "Arial" ))
+		(text "LDS_L" (rect 21 123 51 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "RW" (rect 0 0 18 12)(font "Arial" ))
+		(text "RW" (rect 21 139 39 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "GraphicsCS_L" (rect 0 0 60 12)(font "Arial" ))
+		(text "GraphicsCS_L" (rect 21 155 81 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "VSync_L" (rect 0 0 41 12)(font "Arial" ))
+		(text "VSync_L" (rect 21 171 62 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "SRam_DataIn[15..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "SRam_DataIn[15..0]" (rect 21 187 103 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "VScrollValue[9..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "VScrollValue[9..0]" (rect 202 27 275 39)(font "Arial" ))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(port
+		(pt 296 48)
+		(output)
+		(text "HScrollValue[9..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "HScrollValue[9..0]" (rect 204 43 275 55)(font "Arial" ))
+		(line (pt 296 48)(pt 280 48)(line_width 3))
+	)
+	(port
+		(pt 296 64)
+		(output)
+		(text "DataOutToCPU[15..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "DataOutToCPU[15..0]" (rect 188 59 275 71)(font "Arial" ))
+		(line (pt 296 64)(pt 280 64)(line_width 3))
+	)
+	(port
+		(pt 296 80)
+		(output)
+		(text "Sram_AddressOut[17..0]" (rect 0 0 101 12)(font "Arial" ))
+		(text "Sram_AddressOut[17..0]" (rect 174 75 275 87)(font "Arial" ))
+		(line (pt 296 80)(pt 280 80)(line_width 3))
+	)
+	(port
+		(pt 296 96)
+		(output)
+		(text "Sram_DataOut[15..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "Sram_DataOut[15..0]" (rect 191 91 275 103)(font "Arial" ))
+		(line (pt 296 96)(pt 280 96)(line_width 3))
+	)
+	(port
+		(pt 296 112)
+		(output)
+		(text "Sram_UDS_Out_L" (rect 0 0 80 12)(font "Arial" ))
+		(text "Sram_UDS_Out_L" (rect 195 107 275 119)(font "Arial" ))
+		(line (pt 296 112)(pt 280 112)(line_width 1))
+	)
+	(port
+		(pt 296 128)
+		(output)
+		(text "Sram_LDS_Out_L" (rect 0 0 79 12)(font "Arial" ))
+		(text "Sram_LDS_Out_L" (rect 196 123 275 135)(font "Arial" ))
+		(line (pt 296 128)(pt 280 128)(line_width 1))
+	)
+	(port
+		(pt 296 144)
+		(output)
+		(text "Sram_RW_Out" (rect 0 0 67 12)(font "Arial" ))
+		(text "Sram_RW_Out" (rect 208 139 275 151)(font "Arial" ))
+		(line (pt 296 144)(pt 280 144)(line_width 1))
+	)
+	(port
+		(pt 296 160)
+		(output)
+		(text "ColourPalletteAddr[5..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "ColourPalletteAddr[5..0]" (rect 181 155 275 167)(font "Arial" ))
+		(line (pt 296 160)(pt 280 160)(line_width 3))
+	)
+	(port
+		(pt 296 176)
+		(output)
+		(text "ColourPalletteData[23..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "ColourPalletteData[23..0]" (rect 179 171 275 183)(font "Arial" ))
+		(line (pt 296 176)(pt 280 176)(line_width 3))
+	)
+	(port
+		(pt 296 192)
+		(output)
+		(text "ColourPallette_WE_H" (rect 0 0 89 12)(font "Arial" ))
+		(text "ColourPallette_WE_H" (rect 186 187 275 199)(font "Arial" ))
+		(line (pt 296 192)(pt 280 192)(line_width 1))
+	)
+	(parameter
+		"Idle"
+		"00000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ProcessCommand"
+		"00000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DrawHLine"
+		"00000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DrawVline"
+		"00000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DrawLine"
+		"00000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DrawPixel"
+		"00000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ReadPixel"
+		"00000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ReadPixel1"
+		"00000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ReadPixel2"
+		"00001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PalletteReProgram"
+		"00001001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Hline"
+		"0000000000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Vline"
+		"0000000000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ALine"
+		"0000000000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PutPixel"
+		"0000000000001010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GetPixel"
+		"0000000000001011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ProgramPallette"
+		"0000000000010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 280 224)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 312 -64 412 16))
+)

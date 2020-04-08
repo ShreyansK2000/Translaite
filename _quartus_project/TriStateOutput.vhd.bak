@@ -1,0 +1,20 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+Entity TriStateOutput is
+	Port ( 
+			DataOut 	: out STD_LOGIC_VECTOR(7 downto 0) 
+		);	
+end;
+
+Architecture rtl of TriStateOutput is
+begin
+	process(SRamDataIn, Sel)
+	begin
+			DataOut <= "ZZZZZZZZ";	-- set outpupts to tri-state
+		end if ;
+	end process ;
+end ;

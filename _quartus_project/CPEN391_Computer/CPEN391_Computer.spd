@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/CPEN391_Computer_ARM_A9_HPS.v"
+   type="VERILOG"
+   library="ARM_A9_HPS" />
+ <file path="simulation/CPEN391_Computer.v" type="VERILOG" />
+ <topLevel name="CPEN391_Computer" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="CPEN391_Computer.ARM_A9_HPS"
+   modelPath="CPEN391_Computer.ARM_A9_HPS" />
+ <modelMap
+   controllerPath="CPEN391_Computer.ARM_A9_HPS.fpga_interfaces"
+   modelPath="CPEN391_Computer.ARM_A9_HPS.fpga_interfaces" />
+ <modelMap
+   controllerPath="CPEN391_Computer.ARM_A9_HPS.hps_io"
+   modelPath="CPEN391_Computer.ARM_A9_HPS.hps_io" />
+ <modelMap
+   controllerPath="CPEN391_Computer.Onchip_SRAM"
+   modelPath="CPEN391_Computer.Onchip_SRAM" />
+</simPackage>

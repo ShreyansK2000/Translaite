@@ -1,0 +1,163 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 320 272)
+	(text "OnChipSerialIO" (rect 5 0 89 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 240 25 252)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clock_50Mhz" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "Clock_50Mhz" (rect 21 27 96 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DataIn[7..0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "DataIn[7..0]" (rect 21 43 84 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Address[15..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "Address[15..0]" (rect 21 59 105 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "IOSelect_H" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "IOSelect_H" (rect 21 75 83 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ByteSelect_L" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "ByteSelect_L" (rect 21 91 96 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "WE_L" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "WE_L" (rect 21 107 54 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Reset_L" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "Reset_L" (rect 21 123 68 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "RS232_RxData" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "RS232_RxData" (rect 21 139 107 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "GPS_RxData" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "GPS_RxData" (rect 21 155 94 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "BlueTooth_RxData" (rect 0 0 105 14)(font "Arial" (font_size 8)))
+		(text "BlueTooth_RxData" (rect 21 171 126 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "TouchScreen_RxData" (rect 0 0 125 14)(font "Arial" (font_size 8)))
+		(text "TouchScreen_RxData" (rect 21 187 146 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "WiFi_RXD" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "WiFi_RXD" (rect 21 203 76 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 304 32)
+		(output)
+		(text "DataOut[7..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "DataOut[7..0]" (rect 209 27 283 41)(font "Arial" (font_size 8)))
+		(line (pt 304 32)(pt 288 32)(line_width 3))
+	)
+	(port
+		(pt 304 48)
+		(output)
+		(text "IRQ_H" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "IRQ_H" (rect 248 43 283 57)(font "Arial" (font_size 8)))
+		(line (pt 304 48)(pt 288 48))
+	)
+	(port
+		(pt 304 64)
+		(output)
+		(text "RS232_TxData" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "RS232_TxData" (rect 199 59 283 73)(font "Arial" (font_size 8)))
+		(line (pt 304 64)(pt 288 64))
+	)
+	(port
+		(pt 304 80)
+		(output)
+		(text "GPS_TxData" (rect 0 0 71 14)(font "Arial" (font_size 8)))
+		(text "GPS_TxData" (rect 212 75 283 89)(font "Arial" (font_size 8)))
+		(line (pt 304 80)(pt 288 80))
+	)
+	(port
+		(pt 304 96)
+		(output)
+		(text "BlueTooth_TxData" (rect 0 0 103 14)(font "Arial" (font_size 8)))
+		(text "BlueTooth_TxData" (rect 180 91 283 105)(font "Arial" (font_size 8)))
+		(line (pt 304 96)(pt 288 96))
+	)
+	(port
+		(pt 304 112)
+		(output)
+		(text "TouchScreen_TxData" (rect 0 0 123 14)(font "Arial" (font_size 8)))
+		(text "TouchScreen_TxData" (rect 160 107 283 121)(font "Arial" (font_size 8)))
+		(line (pt 304 112)(pt 288 112))
+	)
+	(port
+		(pt 304 128)
+		(output)
+		(text "WiFi_TXD" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "WiFi_TXD" (rect 229 123 283 137)(font "Arial" (font_size 8)))
+		(line (pt 304 128)(pt 288 128))
+	)
+	(drawing
+		(rectangle (rect 16 16 288 240))
+	)
+)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="VGA_CLOCK_GEN_sim/VGA_CLOCK_GEN.vho" type="VHDL" />
+ <topLevel name="VGA_CLOCK_GEN" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
